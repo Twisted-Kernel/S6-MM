@@ -14,6 +14,13 @@ on boot
 	write /sys/kernel/mm/ksm/sleep_millisecs 500
 	write /sys/kernel/mm/ksm/pages_to_scan 100
 
+# Ensure some kernel boot defaults are set
+    # Set optimistic
+    write /proc/sys/net/ipv6/conf/all/optimistic_dad 1
+    write /proc/sys/net/ipv6/conf/all/use_optimistic 1
+    # Set UKSM CPU governor
+    write /sys/kernel/mm/uksm/cpu_governor low
+
 # Allow system to modify cpufreq control files
 	chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 	chmod 0666 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
