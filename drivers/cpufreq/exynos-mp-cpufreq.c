@@ -87,8 +87,8 @@
 		#define CL1_MIN_FREQ		800000
 	#endif
 	#ifdef EXYNOS7420_CPU_OVERCLOCK
-		#define CL0_MAX_FREQ		1600000
-		#define CL1_MAX_FREQ		2300000
+		#define CL0_MAX_FREQ		1700000
+		#define CL1_MAX_FREQ		2400000
 	#else
 		#define CL0_MAX_FREQ		1500000
 		#define CL1_MAX_FREQ		2100000
