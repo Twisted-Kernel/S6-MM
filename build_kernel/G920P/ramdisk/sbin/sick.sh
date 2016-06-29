@@ -142,11 +142,11 @@ echo "1024" > /sys/block/sda/queue/read_ahead_kb;
 #####################################################################
 # Default IO Scheduler
 
-echo "sioplus" > /sys/block/mmcblk0/queue/scheduler;
-echo "sioplus" > /sys/block/sda/queue/scheduler;
-echo "sioplus" > /sys/block/sdb/queue/scheduler;
-echo "sioplus" > /sys/block/sdc/queue/scheduler;
-echo "sioplus" > /sys/block/vnswap0/queue/scheduler;
+echo "cfq" > /sys/block/mmcblk0/queue/scheduler;
+echo "cfq" > /sys/block/sda/queue/scheduler;
+echo "cfq" > /sys/block/sdb/queue/scheduler;
+echo "cfq" > /sys/block/sdc/queue/scheduler;
+echo "cfq" > /sys/block/vnswap0/queue/scheduler;
 
 #####################################################################
 # Default CPU Governor
