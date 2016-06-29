@@ -1136,7 +1136,8 @@ static int exynos_cpufreq_tmu_notifier(struct notifier_block *notifier,
 		}
 	}
 
-out:
+        ipa_update();
+
 	mutex_unlock(&cpufreq_lock);
 
 	return ret;
