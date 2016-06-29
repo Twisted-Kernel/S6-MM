@@ -12,7 +12,6 @@ persist.radio.lte_vrte_ltd=1
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.add_power_save=1
 persist.data.netmgrd.qos.enable=false
-persist.security.ams.enforcing=0
 ro.secure=0
 ro.allow.mock.location=0
 ro.debuggable=0
@@ -25,7 +24,6 @@ dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m
 ro.dalvik.vm.native.bridge=0
 debug.atrace.tags.enableflags=0
-persist.cne.feature=0
 
 # Ram Managemnt
 
@@ -50,14 +48,22 @@ sys.config.spcm_preload_enable=false
 sys.config.samp_spcm_enable=false
 sys.config.spcm_db_enable=false
 
-# Kernel Tweaks
-
-ro.config.tima=0
-ro.config.knox=0
+#
+# SELINUX_KNOX_PROPERTIES
+#
+persist.cne.feature=0
+persist.security.ams.enforcing=0
 androidboot.selinux=0
 ro.securestorage.knox=false
 ro.securestorage.support=false
 ro.security.mdpp.ux=Disabled
+ro.config.tima=0
+ro.config.timaversion=0
+ro.config.dmverity=false
+ro.config.rkp=false
+ro.config.kap_default_on=false
+ro.config.kap=false
+ro.config.knox=0
 wlan.wfd.hdcp=disable
 
 #
