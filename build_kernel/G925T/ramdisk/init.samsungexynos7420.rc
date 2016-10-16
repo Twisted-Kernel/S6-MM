@@ -354,9 +354,6 @@ on boot
     # CPU Idle
     chown system system /sys/module/cpuidle_exynos64/parameters/enable_mask
 
-    # ASV
-    chown system system /d/asv_summary
-
 # RTC logging daemon
     chmod 0770 /system/bin/rtc_log.sh
     chown system system /system/bin/rtc_log.sh
@@ -493,7 +490,8 @@ on fs
     chown system system /sys/class/lcd/panel/siop_enable
     chown system system /sys/class/lcd/panel/temperature
     chown system radio /sys/class/lcd/panel/mcd_mode
-    chown system media_rw /sys/class/backlight/panel/weakness_hbm_comp	
+    chown system media_rw /sys/class/backlight/panel/weakness_hbm_comp
+    chown system system /sys/class/lcd/panel/ldu_correction	
 
 # Permissions for LCD HMT
     chown system system /sys/class/lcd/panel/hmt_on
@@ -509,6 +507,7 @@ on fs
     chown system system /sys/class/mdnie/mdnie/accessibility
     chown system system /sys/class/mdnie/mdnie/auto_brightness
     chown system system /sys/class/mdnie/mdnie/sensorRGB
+    chown system system /sys/class/mdnie/mdnie/mdnie_ldu
 
 # Permissions for System LSI NFC
 # NFC : Permissions for NFC
